@@ -1,0 +1,4 @@
+Nome da Empresa;Numero de Inscricao da Empresa;Nome do Banco;Nome da Rua;Numero do Local;Nome da Cidade;CEP;Sigla do Estado
+{nome_empresa};{cnpj_empresa};{nome_banco};{rua};{numero};{cidade};{cep};{estado}
+Nome do Favorecido;Data de Pagamento;Valor do Pagamento;Numero do Documento Atribuido pela Empresa;Forma de Lancamento
+{nome_favorecido};{data_pgto};{valor};{numero_documento};{forma_lcto}
