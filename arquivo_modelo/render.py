@@ -13,14 +13,17 @@ def render_as(reglist, fmt):
     g29_dict = {1: 'Credito em Conta Corrente',
                 2: 'Cheque Pagamento/Administrativo',
                 3: 'DOC/TED (1) (2)',} # ...
-    
     moeda_dict = {'BRL': 'R$'}
-
     templates = {'txt': template_txt,
                  'html': template_html,
                  'csv': template_csv,}
-    tab1, tab2, linha_t, end_of_table, end_of_doc = templates[fmt]()
+    try:
+        template = templates[fmt]
+    except KeyError:
+        raise NotImplementedError(
+            f'traducao para {fmt} nao suportada') from None
 
+    tab1, tab2, linha_t, end_of_table, end_of_doc = template()
     out = ''
     for lote in reglist:
         dados1_val = {'nome_empresa': lote.header.empresa.nome,
