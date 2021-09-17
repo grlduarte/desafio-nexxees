@@ -7,7 +7,20 @@ import argparse
 from arquivo_modelo import Registros
 
 
-def main(input_file, output_file, fmt):
+def main(input_file, output_file, fmt=None):
+    """
+    Traduz o arquivo em input_file e salva em output_file
+
+    Parametros
+    ----------
+    input_file : str
+        Arquivo a ser traduzido
+    output_file : str
+        Arquivo destino
+    fmt : str, optional
+        Formato do arquivo destino (por padrão é escolhido
+        pela extensão do arquivo destino)
+    """        
     try:
         reglist = Registros(input_file)
         reglist.salvar_como(output_file, fmt=fmt)

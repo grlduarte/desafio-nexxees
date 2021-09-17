@@ -8,6 +8,8 @@ Created on 16-set-2021
 
 from .registro import *
 from .listas import Registros, Lote
+from .__main__ import main
 
 
 __all__ = ['registro', 'listaregistros']
+traduzir = main
